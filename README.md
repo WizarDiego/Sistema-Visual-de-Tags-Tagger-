@@ -23,3 +23,5 @@ Um aplicativo desktop desenvolvido em Python (PyQt6) com a bela e nostálgica es
 1. Clone este repositório ou faça o download.
 2. Dê **duplo clique** no arquivo `run.bat`.
 3. Na primeira execução, ele criará automaticamente o ambiente virtual, instalará as dependências (`PyQt6` e `Pillow`) e iniciará o aplicativo.
+<img width="1557" height="373" alt="Captura de tela 2026-05-05 030604" src="https://github.com/user-attachments/assets/67c104dc-35a3-4bd3-90db-071ff85fb490" />
+<img width="1562" height="1157" alt="Captura de tela 2026-05-05 030543" src="https://github.com/user-attachments/assets/0347187d-2bd8-46f0-9e17-3f15272850b0" />
