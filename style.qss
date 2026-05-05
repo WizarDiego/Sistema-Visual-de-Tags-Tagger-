@@ -1,0 +1,183 @@
+/* Tema Frutiger Aero para PyQt6 */
+
+QWidget {
+    font-family: "Segoe UI", "Arial";
+    font-size: 14px;
+    color: #1a4b66;
+}
+
+QMainWindow, QDialog {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, 
+        stop:0 rgba(230, 248, 255, 255), 
+        stop:1 rgba(190, 235, 245, 255));
+}
+
+QTabWidget::pane {
+    border: 1px solid #82c8eb;
+    background: rgba(255, 255, 255, 180);
+    border-radius: 8px;
+    margin-top: -1px;
+}
+
+QTabBar::tab {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(220, 245, 255, 255), 
+        stop:0.49 rgba(150, 210, 255, 255), 
+        stop:0.5 rgba(100, 190, 240, 255), 
+        stop:1 rgba(140, 220, 255, 255));
+    border: 1px solid #82c8eb;
+    border-bottom-color: #82c8eb;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    min-width: 120px;
+    padding: 8px;
+    color: #003366;
+    font-weight: bold;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(255, 255, 255, 255), 
+        stop:0.49 rgba(210, 240, 255, 255), 
+        stop:0.5 rgba(170, 220, 255, 255), 
+        stop:1 rgba(220, 245, 255, 255));
+}
+
+/* Botões Genéricos */
+QPushButton {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(220, 250, 220, 255), 
+        stop:0.49 rgba(140, 220, 150, 255), 
+        stop:0.5 rgba(60, 190, 90, 255), 
+        stop:1 rgba(110, 210, 130, 255));
+    border: 1px solid #4ca660;
+    border-radius: 12px;
+    color: white;
+    padding: 8px 16px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+QPushButton:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(240, 255, 240, 255), 
+        stop:0.49 rgba(170, 240, 180, 255), 
+        stop:0.5 rgba(90, 210, 120, 255), 
+        stop:1 rgba(140, 230, 160, 255));
+}
+
+/* ---------------------------------
+   SISTEMA DE TAGS VISUAIS
+---------------------------------- */
+
+/* Tag Selecionada (Área 2) - Estilo Verde Vidro */
+QPushButton[tagState="selected"] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(100, 220, 120, 200), 
+        stop:0.49 rgba(60, 180, 90, 200), 
+        stop:0.5 rgba(30, 150, 60, 200), 
+        stop:1 rgba(50, 170, 80, 200));
+    border: 1px solid rgba(40, 160, 70, 255);
+    border-radius: 14px;
+    color: white;
+    padding: 6px 14px;
+    font-weight: bold;
+    font-size: 13px;
+}
+QPushButton[tagState="selected"]:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(150, 240, 150, 220), 
+        stop:0.49 rgba(90, 210, 110, 220), 
+        stop:0.5 rgba(60, 180, 90, 220), 
+        stop:1 rgba(80, 200, 110, 220));
+    border: 1px solid rgba(255, 255, 255, 150);
+}
+
+/* Tag Disponível/Removida (Área 3) - Estilo Vermelho/Azul Vidro */
+QPushButton[tagState="available"] {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(240, 160, 160, 180), 
+        stop:0.49 rgba(220, 120, 120, 180), 
+        stop:0.5 rgba(190, 80, 80, 180), 
+        stop:1 rgba(210, 100, 100, 180));
+    border: 1px solid rgba(180, 60, 60, 200);
+    border-radius: 14px;
+    color: white;
+    padding: 6px 14px;
+    font-weight: normal;
+    font-size: 13px;
+}
+QPushButton[tagState="available"]:hover {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(255, 190, 190, 220), 
+        stop:0.49 rgba(240, 150, 150, 220), 
+        stop:0.5 rgba(220, 110, 110, 220), 
+        stop:1 rgba(230, 130, 130, 220));
+    border: 1px solid rgba(255, 255, 255, 150);
+}
+
+/* Scroll Areas */
+QScrollArea {
+    background: transparent;
+    border: 2px solid rgba(130, 200, 235, 100);
+    border-radius: 8px;
+}
+QScrollArea > QWidget > QWidget {
+    background: rgba(255, 255, 255, 100); /* Transparência para o vidro do fundo */
+}
+
+
+/* Outros Elementos */
+QTextEdit, QLineEdit, QListWidget {
+    background-color: rgba(255, 255, 255, 230);
+    border: 2px solid #a3d9f5;
+    border-radius: 8px;
+    padding: 5px;
+    color: #1a4b66;
+}
+
+QTextEdit:focus, QLineEdit:focus, QListWidget:focus {
+    border: 2px solid #4ca660;
+    background-color: white;
+}
+
+QLabel {
+    color: #003366;
+    font-weight: bold;
+}
+
+QProgressBar {
+    border: 1px solid #82c8eb;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 150);
+}
+
+QProgressBar::chunk {
+    background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
+        stop:0 rgba(140, 220, 150, 255), 
+        stop:1 rgba(60, 190, 90, 255));
+    border-radius: 9px;
+}
+
+/* Scrollbars Frutiger Aero */
+QScrollBar:vertical {
+    border: none;
+    background: rgba(200, 235, 250, 100);
+    width: 14px;
+    margin: 15px 0 15px 0;
+    border-radius: 7px;
+}
+
+QScrollBar::handle:vertical {
+    background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, 
+        stop:0 rgba(150, 210, 255, 255), 
+        stop:1 rgba(100, 190, 240, 255));
+    min-height: 20px;
+    border-radius: 7px;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    background: none;
+    border: none;
+}
