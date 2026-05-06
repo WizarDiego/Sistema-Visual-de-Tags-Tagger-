@@ -2,7 +2,6 @@
 
 QWidget {
     font-family: "Segoe UI", "Arial";
-    font-size: 14px;
     color: #1a4b66;
 }
 
@@ -53,9 +52,9 @@ QPushButton {
     border: 1px solid #4ca660;
     border-radius: 12px;
     color: white;
-    padding: 8px 16px;
+    padding: 8px 14px;
+    min-height: 8px;
     font-weight: bold;
-    font-size: 14px;
 }
 
 QPushButton:hover {
@@ -64,6 +63,22 @@ QPushButton:hover {
         stop:0.49 rgba(170, 240, 180, 255), 
         stop:0.5 rgba(90, 210, 120, 255), 
         stop:1 rgba(140, 230, 160, 255));
+}
+
+QPushButton[role="primaryAction"] {
+    padding: 10px 18px;
+    min-height: 18px;
+}
+
+QPushButton[role="secondaryAction"] {
+    padding: 10px 18px;
+    min-height: 18px;
+}
+
+QPushButton[role="compactAction"] {
+    padding: 6px 10px;
+    min-height: 6px;
+    border-radius: 9px;
 }
 
 /* ---------------------------------
@@ -82,7 +97,6 @@ QPushButton[tagState="selected"] {
     color: white;
     padding: 6px 14px;
     font-weight: bold;
-    font-size: 13px;
 }
 QPushButton[tagState="selected"]:hover {
     background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
@@ -105,7 +119,6 @@ QPushButton[tagState="available"] {
     color: white;
     padding: 6px 14px;
     font-weight: normal;
-    font-size: 13px;
 }
 QPushButton[tagState="available"]:hover {
     background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, 
@@ -136,7 +149,51 @@ QTextEdit, QLineEdit, QListWidget {
     color: #1a4b66;
 }
 
+QComboBox, QGroupBox {
+    background-color: rgba(255, 255, 255, 210);
+    border: 2px solid #a3d9f5;
+    border-radius: 10px;
+    color: #1a4b66;
+}
+
+QComboBox {
+    padding: 6px 10px;
+    min-height: 28px;
+}
+
+QGroupBox {
+    margin-top: 12px;
+    padding: 18px 12px 12px 12px;
+    font-weight: bold;
+}
+
+QGroupBox[role="configCard"] {
+    background-color: rgba(255, 255, 255, 225);
+    border: 2px solid rgba(130, 200, 235, 160);
+    border-radius: 14px;
+    padding: 18px 14px 14px 14px;
+}
+
+QGroupBox[role="aiTopCard"] {
+    background-color: rgba(255, 255, 255, 210);
+    border: 2px solid rgba(130, 200, 235, 150);
+    border-radius: 10px;
+    padding: 14px 12px 10px 12px;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 12px;
+    padding: 0 6px;
+    color: #0b4c73;
+}
+
 QTextEdit:focus, QLineEdit:focus, QListWidget:focus {
+    border: 2px solid #4ca660;
+    background-color: white;
+}
+
+QComboBox:focus {
     border: 2px solid #4ca660;
     background-color: white;
 }
@@ -144,6 +201,42 @@ QTextEdit:focus, QLineEdit:focus, QListWidget:focus {
 QLabel {
     color: #003366;
     font-weight: bold;
+}
+
+QLabel[role="sectionTitle"] {
+    color: #0b4c73;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+QLabel[role="aiHint"] {
+    color: #2f6f86;
+    font-weight: normal;
+}
+
+QLabel[role="imagePanel"] {
+    background-color: rgba(255, 255, 255, 170);
+    border: 2px solid rgba(130, 200, 235, 120);
+    border-radius: 12px;
+    padding: 8px;
+}
+
+QFrame[role="processingBar"] {
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 120);
+    background-color: rgba(120, 180, 210, 120);
+}
+
+QFrame[role="processingBar"][state="processing"] {
+    background-color: rgba(220, 38, 38, 220);
+}
+
+QFrame[role="processingBar"][state="done"] {
+    background-color: rgba(34, 197, 94, 220);
+}
+
+QFrame[role="processingBar"][state="error"] {
+    background-color: rgba(180, 30, 30, 220);
 }
 
 QProgressBar {

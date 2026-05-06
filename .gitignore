@@ -1,5 +1,27 @@
+# Ambiente virtual Python
 venv/
+
+# Cache Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Saídas geradas pelo app
 Flip_Output/
+*_bboxes.png
+*_yolo.txt
+
+# Modelos e cache pesado (NÃO versionar — podem ter GB de tamanho)
+modelo/
+models_cache/
+scratch_florence2/
+
+# Cache HuggingFace (gerado automaticamente pelo snapshot_download)
+.cache/
+
+# Variáveis de ambiente
 .env
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db

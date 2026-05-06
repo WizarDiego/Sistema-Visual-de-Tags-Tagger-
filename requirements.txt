@@ -1,2 +1,11 @@
 PyQt6
 Pillow
+setuptools<82
+torch
+torchvision
+transformers
+timm
+einops
+huggingface_hub
+opencv-python-headless
+safetensors
