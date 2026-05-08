@@ -1,4 +1,4 @@
-# Sistema Visual de Tags & Batch Editor (Frutiger Aero)
+# Sistema Visual de Tags & Batch Editor (Frutiger Aero).
 
 Um aplicativo desktop desenvolvido em Python (PyQt6) com a bela e nostálgica estética **Frutiger Aero**. Ele foi projetado para facilitar o processamento rápido em lote de imagens e o gerenciamento visual de *datasets* (textos e tags) para o treinamento de IAs e LoRAs.
 
